@@ -1,0 +1,19 @@
+2. Mã số sinh viên("SV01), Họ tên, Ngày tháng năm sinh, Giới tính
+thành danh sách một đối tượng khác có thông tin sau Mã số sinh viên, Họ tên, Tuổi.
+Lọc theo giới tính được truyền vào và sắp xếp theo số tuổi giảm dần, nếu trùng số tuổi thì sắp xếp theo Mã số sinh viên tăng dần.   
+
+
+
+
+3. Chia nhóm để làm việc. Một nhóm có 2 thành viên, làm một trong những so sánh sau: 
+- So sánh Array với ArrayList
+- So sánh LinkedList với ArrayList
+- So sánh HashSet và ArrayList
+- TreeSet và HashSet
+- TreeMap và HashMap
+- HashMap và HashTable
+
+So sánh trên các phương diện sau:
+- Hiệu năng (tốc độ đọc, ghi, xóa, ...)
+- Bộ nhớ sử dụng khi lưu ít dữ liệu, khi nhiều dữ liệu
+- Các hàm hỗ trợ, tiện ích

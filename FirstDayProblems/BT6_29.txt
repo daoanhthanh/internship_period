@@ -1,0 +1,15 @@
+Tính thời gian làm việc của nhân viên trong công ty.
+- Thời gian bắt đầu làm là 8h30 đến 9h00
+- Thời gian kết thúc là 5h30 tới 6h00
+- Thời gian nghỉ trưa từ 12h00 tới 13h00
+Một người đi đúng giờ là làm việc đủ 8h trong ngày. 
+VD: bắt đầu 8h40 - nghỉ 5h40
+       bắt đầu 9h00 - nghỉ 6h00
+
+Viết chương trình cho phép
+ + Nhập vào thời gian bắt đầu và kết thúc có dạng hh:mm
+ + In ra thời gian làm việc của 1 nhân viên theo giờ và phút.
+ 
+Lưu ý: 
+- In ra màn hình lỗi nếu người dùng cố tình nhập sai
+- Không dùng các class sau: Date, Instant, Timestamp, Calendar, SimpleDateFormat, String
