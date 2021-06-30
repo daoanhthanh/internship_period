@@ -6,7 +6,7 @@ import studentDBProblem.entity.Gender;
 import studentDBProblem.entity.Student;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         Service s = new Service();
         s.addStudent(new Student("SV01", "Dao Anh Thanh", LocalDate.of(2000, 02, 29), Gender.MALE));
         s.addStudent(new Student("SV02", "Tran Thi Min", LocalDate.of(2000, 8, 10), Gender.FEMALE));
@@ -21,7 +21,6 @@ public class Client {
         s.addStudent(new Student("SV011", "Taylor Swift", LocalDate.of(1989, 12, 13), Gender.FEMALE));
         s.addStudent(new Student("SV012", "Adam Smith", LocalDate.of(2001, 5, 6), Gender.OTHER));
         s.addStudent(new Student("SV013", "Nicky Minaj", LocalDate.of(1982, 12, 8), Gender.FEMALE));
-
         s.getAll();
     }
 }
