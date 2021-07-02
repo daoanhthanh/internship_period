@@ -1,4 +1,4 @@
-package studentDBProblem.entity;
+package student_problem.entity;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -46,6 +46,7 @@ public class Student {
     public Gender getGender() {
         return gender;
     }
+    
 
     public void setGender(Gender gender) {
         this.gender = gender;

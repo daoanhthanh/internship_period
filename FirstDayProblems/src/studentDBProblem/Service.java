@@ -35,7 +35,7 @@ public class Service {
      */
     public void getAll() {
         students.stream().filter(s -> s.getGender().equals(Gender.MALE))
-                .sorted(sortByAge().thenComparing(sortByStudentCode())).forEach(System.out::println);
+                .sorted(sortByAge().thenComparing(sortByStudentCode())).sorted();
         System.out.println("*******************");
         students.stream().filter(s -> s.getGender().equals(Gender.FEMALE))
                 .sorted(sortByAge().thenComparing(sortByStudentCode())).forEach(System.out::println);
@@ -50,8 +50,7 @@ public class Service {
     }
 
     private Comparator<Student> sortByStudentCode() {
-        // ascending order
-        return ((Student s1, Student s2) -> s1.getStudentCode().compareTo(s2.getStudentCode()));
+        return ((Student s1, Student s2) -> Integer.compare(s1.getStudentCode(), s2.getStudentCode()));
     }
 
 }

@@ -1,0 +1,2 @@
+instead of create a bridge for transferring data of mother's class to nested class,
+it does that by using thing called api reflection.
