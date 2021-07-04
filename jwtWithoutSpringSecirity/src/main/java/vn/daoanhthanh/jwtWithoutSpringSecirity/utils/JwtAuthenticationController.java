@@ -18,7 +18,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities.User;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.service.UserService;
 
 public class JwtAuthenticationController {

@@ -5,7 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities.User;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.repo.UserRepository;
 
 public class UserServiceImpl implements UserService {

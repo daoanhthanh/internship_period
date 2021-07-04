@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities.User;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.repo.UserRepository;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.utils.PasswordUtil;
 

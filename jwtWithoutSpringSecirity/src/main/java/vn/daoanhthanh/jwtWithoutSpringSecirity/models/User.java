@@ -1,4 +1,4 @@
-package vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities;
+package vn.daoanhthanh.jwtWithoutSpringSecirity.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

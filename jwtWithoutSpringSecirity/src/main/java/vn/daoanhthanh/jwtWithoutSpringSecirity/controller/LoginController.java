@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities.User;
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.request.LoginRequest;
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.response.LoginResonse;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.LoginRequest;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.LoginResonse;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.service.LoginService;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.utils.JwtAuthenticationController;
 

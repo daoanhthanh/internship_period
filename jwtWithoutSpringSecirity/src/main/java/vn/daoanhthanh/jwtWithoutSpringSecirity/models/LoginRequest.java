@@ -1,4 +1,4 @@
-package vn.daoanhthanh.jwtWithoutSpringSecirity.models.request;
+package vn.daoanhthanh.jwtWithoutSpringSecirity.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

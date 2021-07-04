@@ -3,7 +3,7 @@ package vn.daoanhthanh.jwtWithoutSpringSecirity.service;
 import java.util.List;
 import java.util.Optional;
 
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.entities.User;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 
 public interface UserService {
     boolean delete(Long id);
