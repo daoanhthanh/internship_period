@@ -25,15 +25,14 @@ public class LoginService {
     }
 
     public User checkUser(String username, String password) throws Exception {
-        Optional<User> optionalUser = userRepository.getUserByUsername(username);
-
-        if (!optionalUser.isPresent()) {
-            throw new Exception("username is not found");
+        User user = userRepository.findUserByUserName(username).orElse(null);
+        if (user == null) {
+            throw new Exception("User not found");
         }
-        if (!passwordUtil.verifyUserPassword(password, optionalUser.get().getPassword(), passwordUtil.getSalt(20))) {
+        if (!passwordUtil.verifyUserPassword(password, user.getPassword(), passwordUtil.getSalt(20))) {
             throw new Exception("wrong password");
         }
-        return optionalUser.get();
+        return user;
 
     }
 

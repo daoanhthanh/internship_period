@@ -10,7 +10,7 @@ import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactor
 import org.springframework.data.redis.core.RedisTemplate;
 
 @Configuration
-public class ResdisConfig {
+public class RedisConfig {
 
     @Value("${spring.redis.host}")
     private String redisHost;
@@ -26,10 +26,8 @@ public class ResdisConfig {
     @Bean
     @Primary
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-
         RedisTemplate<Object, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory());
-
         return template;
     }
 }
