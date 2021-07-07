@@ -1,0 +1,6 @@
+client/entity/Teacher.java
+ client.entity.Teacher
+client/entity/Course.java
+ client.entity.Course
+client/Client.java
+ client.Client
