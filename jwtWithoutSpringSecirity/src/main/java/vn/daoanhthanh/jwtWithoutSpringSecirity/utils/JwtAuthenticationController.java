@@ -18,9 +18,11 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
+import org.springframework.stereotype.Component;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.service.UserService;
 
+@Component
 public class JwtAuthenticationController {
 
     @Value("${jwt.secret}")

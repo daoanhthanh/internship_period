@@ -18,7 +18,7 @@ public class Interceptor implements HandlerInterceptor {
             "^/webjars/\\**$", "^/swagger-resources/configuration/ui$", "^/swagger-ui.html$" };
     private final JwtAuthenticationController jwtAuthenticationController;
 
-    @Autowired
+//    @Autowired
     public Interceptor(JwtAuthenticationController jwtAuthenticationController) {
         this.jwtAuthenticationController = jwtAuthenticationController;
     }
