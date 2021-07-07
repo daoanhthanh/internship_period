@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import vn.daoanhthanh.jwtWithoutSpringSecirity.models.LoginRequest;
-import vn.daoanhthanh.jwtWithoutSpringSecirity.models.LoginResonse;
+import vn.daoanhthanh.jwtWithoutSpringSecirity.models.LoginResponse;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.service.LoginService;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.utils.JwtAuthenticationController;
@@ -33,7 +33,7 @@ public class LoginController {
         if (user != null) {
             token = jwtAuthenticationController.generateToken(loginRequest.getUsername());
         }
-        return new ResponseEntity<>(new LoginResonse(token, loginRequest.getUsername()), HttpStatus.OK);
+        return new ResponseEntity<>(new LoginResponse(token, loginRequest.getUsername()), HttpStatus.OK);
     }
 
     @PostMapping("/logout")

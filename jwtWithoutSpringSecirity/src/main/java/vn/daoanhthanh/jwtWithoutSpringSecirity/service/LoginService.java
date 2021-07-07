@@ -16,7 +16,6 @@ public class LoginService {
     private final RedisTemplate<Object, Object> template;
     private final PasswordUtil passwordUtil;
 
-    @Autowired
     public LoginService(UserRepository userRepository, RedisTemplate<Object, Object> template,
             PasswordUtil passwordUtil) {
         this.userRepository = userRepository;
@@ -27,7 +26,7 @@ public class LoginService {
     public User checkUser(String username, String password) throws Exception {
         Optional<User> optionalUser = userRepository.getUserByUsername(username);
 
-        if (!optionalUser.isPresent()) {
+        if (optionalUser.isEmpty()) {
             throw new Exception("username is not found");
         }
         if (!passwordUtil.verifyUserPassword(password, optionalUser.get().getPassword(), passwordUtil.getSalt(20))) {
