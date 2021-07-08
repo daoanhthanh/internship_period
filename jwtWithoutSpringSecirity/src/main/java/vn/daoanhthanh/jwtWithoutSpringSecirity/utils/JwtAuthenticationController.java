@@ -24,7 +24,10 @@ import vn.daoanhthanh.jwtWithoutSpringSecirity.models.User;
 import vn.daoanhthanh.jwtWithoutSpringSecirity.service.UserService;
 
 @Component
+<<<<<<< HEAD
 @RequiredArgsConstructor
+=======
+>>>>>>> 794f88c6d68b2deae5b6e0ce1d1029f3c52b7b68
 public class JwtAuthenticationController {
 
     @Value("${jwt.secret}")
