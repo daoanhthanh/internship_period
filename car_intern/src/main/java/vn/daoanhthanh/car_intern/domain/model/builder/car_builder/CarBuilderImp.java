@@ -7,9 +7,12 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.UUID;
 
+import org.springframework.stereotype.Component;
+
 /**
  * A creational pattern to build a complex structure object
  */
+@Component
 public class CarBuilderImp implements CarBuilder {
 
     private UUID carId;
@@ -29,47 +32,56 @@ public class CarBuilderImp implements CarBuilder {
     private LocalDateTime createdAt;
 
     @Override
-    public void setCarId(UUID carId) {
+    public CarBuilder setCarId(UUID carId) {
         this.carId = carId;
+        return this;
     }
 
     @Override
-    public void setCarModel(String model) {
+    public CarBuilder setCarModel(String model) {
         this.model = model;
+        return this;
     }
 
     @Override
-    public void setCarRegistrationNumber(String registrationNumber) {
+    public CarBuilder setCarRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
+        return this;
     }
 
     @Override
-    public void setCarEngine(Engine engine) {
+    public CarBuilder setCarEngine(Engine engine) {
         this.engine = engine;
+        return this;
     }
 
     @Override
-    public void setCarOwnerID(UUID id) {
+    public CarBuilder setCarOwnerID(UUID id) {
         ownerID = id;
+        return this;
     }
 
     @Override
-    public void setCylinderCapacity(int cylinderCapacity) {
+    public CarBuilder setCylinderCapacity(int cylinderCapacity) {
         this.cylinderCapacity = cylinderCapacity;
+        return this;
     }
 
     @Override
-    public void setCarSeat(int seat) {
+    public CarBuilder setCarSeat(int seat) {
         this.seat = seat;
+        return this;
     }
 
     @Override
-    public void setCreatedAt() {
+    public CarBuilder setCreatedAt() {
         ZoneId hanoi = ZoneId.of("Asia/Bangkok");
         this.createdAt = LocalDateTime.now(hanoi);
+        return this;
     }
 
     public Car build() {
-        return new Car(carId, model, seat, registrationNumber, engine, ownerID, cylinderCapacity, createdAt, LocalDateTime.now());
+        return new Car(carId, model, seat, registrationNumber, engine, ownerID, cylinderCapacity, createdAt,
+                LocalDateTime.now(ZoneId.of("Asia/Bangkok")));
     }
 }

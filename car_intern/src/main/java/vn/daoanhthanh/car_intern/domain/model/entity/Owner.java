@@ -14,7 +14,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -23,13 +22,13 @@ public class Owner implements Persistable<UUID>, TimeStamps {
     @Id
     @GenericGenerator(name = "UUIDGenerator", strategy = "uuid2")
     @GeneratedValue(generator = "UUIDGenerator")
-    @Column(name = "id", updatable = false, nullable = false)
+    @Column(updatable = false, nullable = false)
     private UUID id;
 
     @Column(length = 150)
     private String name;
 
-    @Column(name="phone", length = 10, nullable = false)
+    @Column(name = "phone", length = 10, nullable = false)
     private String phoneNumber;
 
     private String driveLicense;
@@ -45,8 +44,10 @@ public class Owner implements Persistable<UUID>, TimeStamps {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        if (this == o)
+            return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o))
+            return false;
         Owner owner = (Owner) o;
 
         return Objects.equals(id, owner.id);

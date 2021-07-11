@@ -1,33 +1,39 @@
 package vn.daoanhthanh.car_intern.domain.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import vn.daoanhthanh.car_intern.domain.model.entity.Car;
+import vn.daoanhthanh.car_intern.domain.repository.CarRepository;
 import vn.daoanhthanh.car_intern.domain.service.CarService;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class CarServiceImpl implements CarService {
+    private final CarRepository repo;
+
     @Override
     public Car createCar(Car car) {
-        return null;
+        return repo.save(car);
     }
 
     @Override
     public List<Car> getAllCars() {
-        return null;
+        return repo.findAll();
     }
 
     @Override
-    public Optional<Car> findCarByName(String vehicleName) {
-        return Optional.empty();
+    public List<Car> findCarByName(String vehicleName) {
+        return repo.getCarByNameLike(vehicleName);
     }
 
     @Override
-    public Optional<Car> findCarById(String id) {
-        return Optional.empty();
+    public Optional<Car> findCarById(UUID id) {
+        return repo.findById(id);
     }
 
     @Override
@@ -41,12 +47,12 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Car updateCar() {
-        return null;
+    public Car updateCar(Car car) {
+        return repo.save(car);
     }
 
     @Override
-    public boolean deleteCar() {
-        return false;
+    public void deleteCar(UUID id) {
+        repo.deleteById(id);
     }
 }

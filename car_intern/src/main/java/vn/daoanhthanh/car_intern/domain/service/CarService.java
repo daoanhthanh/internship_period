@@ -5,21 +5,23 @@ import vn.daoanhthanh.car_intern.domain.model.entity.Car;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.UUID;
 
 public interface CarService {
     Car createCar(Car car);
 
     List<Car> getAllCars();
 
-    Optional<Car> findCarByName(String vehicleName);
+    List<Car> findCarByName(String vehicleName);
 
-    Optional<Car> findCarById(String id);
+    Optional<Car> findCarById(UUID id);
 
     Optional<Set<Car>> findCarByOwnerName(String ownerName);
 
     Set<Car> findCarByEngineCode(String engineCode);
 
-    Car updateCar();
+    Car updateCar(Car car);
 
-    boolean deleteCar();
+    void deleteCar(UUID id);
+
 }
